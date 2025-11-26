@@ -30,8 +30,15 @@ public class WhileLoops {
     * countEvensUpTo(10) -> 5 // {2, 4, 6, 8, 10}
     */
    public static int countEvensUpTo(int n) {
-       // YOUR CODE HERE
-       return -1;
+      int count = 0;
+      int current = 1;
+      while (current <= n) {
+          if (current % 2 == 0) {
+              count++;
+          }
+          current++;
+        }
+       return count;
    }
 
 
@@ -48,7 +55,13 @@ public class WhileLoops {
     */
    public static int digitSum(int n) {
        // YOUR CODE HERE
-       return -1;
+       int current = n;
+       int sum = 0;
+       while (current > 0) {
+            sum += current % 10;
+            current /= 10;
+       }
+       return sum;
    }
 
 
@@ -73,7 +86,14 @@ public class WhileLoops {
     */
    public static int countDownBy(int start, int step) {
        // YOUR CODE HERE
-       return -1;
+       if (step <= 0) {
+           return start;
+       }
+         int current = start;
+         while (current - step >= 0) {
+              current -= step;
+         }
+       return current;
    }
 
 
@@ -106,7 +126,13 @@ public class WhileLoops {
     */
    public static int weeksToReachGoal(int startBalance, int weeklyDeposit, int goalBalance) {
        // CODE HERE
-       return -1;
+         int currentBalance = startBalance;
+        int weeks = 0;
+        while (currentBalance < goalBalance) {
+            currentBalance += weeklyDeposit;
+            weeks++;
+        }
+        return weeks;
    }
 
 
@@ -141,7 +167,16 @@ public class WhileLoops {
     */
    public static int minutesUntilDead(int startPercent, int perMinuteUse) {
        //YOUR CODE HERE
-       return -1;
+            if (startPercent <= 0 || perMinuteUse <= 0) {
+                return 0;
+            }
+            int currentPercent = startPercent;
+            int minutes = 0;
+            while (currentPercent > 0) {
+                currentPercent -= perMinuteUse;
+                minutes++;
+            }
+            return minutes;
    }
 }
 

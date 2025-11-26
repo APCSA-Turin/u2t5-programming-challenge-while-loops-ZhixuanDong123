@@ -9,8 +9,8 @@ public class WhileLoopsTest {
         assertEquals(0, WhileLoops.countEvensUpTo(1));
         assertEquals(1, WhileLoops.countEvensUpTo(2));   // {2}
         assertEquals(3, WhileLoops.countEvensUpTo(6));   // {2,4,6}
-        assertEquals(5, WhileLoops.countEvensUpTo(10));  // {2,4,6,8,10}
-    }
+        assertEquals(5, WhileLoops.countEvensUpTo(10));  // {2,4,6,8,10} 
+    } 
 
     @Test
     void testCountEvensUpTo_edgeCases() {
@@ -83,5 +83,5 @@ public class WhileLoopsTest {
 
         assertEquals(4, WhileLoops.minutesUntilDead(100, 33));
         // 100 -> 67 (1) -> 34 (2) -> 1 (3) -> -32 (4)
-    }
+    } 
 }
